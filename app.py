@@ -13,8 +13,8 @@ subprocess.run(install_command, shell=True)
 import plotly.express as px
 
 # Load the data
-stsurveydf = pd.read_csv(r'C:\Users\PC\surveywebapp\stsurveydf.csv', index_col=None)
-Mentordf = pd.read_csv(r'C:\Users\PC\surveywebapp\Mentordf.csv', index_col=0) 
+stsurveydf = pd.read_csv(r'surveywebapp\stsurveydf.csv', index_col=None)
+Mentordf = pd.read_csv(r'surveywebapp\Mentordf.csv', index_col=0) 
 stsurveydf.drop('Unnamed: 0', axis=1, inplace=True)
 Mentordf.drop('Unnamed: 0', axis=1, inplace=True)
 
