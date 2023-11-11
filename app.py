@@ -1,11 +1,27 @@
 import streamlit as st
 import pandas as pd
+import subprocess
+
+# Specify the command to install the package
+install_command = "pip install plotly"
+
+# Use subprocess to run the command
+subprocess.run(install_command, shell=True)
+
+# Check for success or failure
+# Note: This is a simple check and might not cover all scenarios
+if subprocess.CompletedProcess.returncode == 0:
+    print("Installation successful")
+else:
+    print("Installation failed")
+
 import plotly.express as px
 
 # Load the data
 stsurveydf = pd.read_csv(r'C:\Users\PC\surveywebapp\stsurveydf.csv', index_col=None)
-Mentordf = pd.read_csv(r'C:\Users\PC\surveywebapp\Mentordf.csv', index_col=0)  # Assuming 'Unnamed: 0' is the index column, adjust accordingly
-#Mentordf.drop('Unnamed: 0', axis=1, inplace=True)
+Mentordf = pd.read_csv(r'C:\Users\PC\surveywebapp\Mentordf.csv', index_col=0) 
+stsurveydf.drop('Unnamed: 0', axis=1, inplace=True)
+Mentordf.drop('Unnamed: 0', axis=1, inplace=True)
 
 # Define a function to generate the report
 def generate_survey_report():
