@@ -8,12 +8,7 @@ install_command = "pip install plotly"
 # Use subprocess to run the command
 subprocess.run(install_command, shell=True)
 
-# Check for success or failure
-# Note: This is a simple check and might not cover all scenarios
-if subprocess.CompletedProcess.returncode == 0:
-    print("Installation successful")
-else:
-    print("Installation failed")
+
 
 import plotly.express as px
 
