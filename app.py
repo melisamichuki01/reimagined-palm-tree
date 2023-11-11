@@ -14,7 +14,7 @@ import plotly.express as px
 
 # Load the data
 stsurveydf = pd.read_csv(r'stsurveydf.csv', index_col=None)
-Mentordf = pd.read_csv(r'Mentordf.csv', index_col=0) 
+Mentordf = pd.read_csv(r'Mentordf.csv', index_col=False) 
 stsurveydf.drop('Unnamed: 0', axis=1, inplace=True)
 Mentordf.drop('Unnamed: 0', axis=1, inplace=True)
 
